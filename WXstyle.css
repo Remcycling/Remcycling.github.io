@@ -1,0 +1,267 @@
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+.enter{
+    padding-top: 5px;
+    display:block;
+    width: 420px;
+}
+h4{
+    text-align: center;
+}
+
+textarea{
+    padding-top: 5px;
+    display:block;
+    width: 420px;
+}
+
+.header {
+    background-color: #61CAC0;
+}
+.main-menu {
+    float: right;
+}
+li {
+    float: right;
+}
+li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    overflow: hidden;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.video {
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+
+.title{
+    font-size: 14px;
+    font-weight: bold;
+}
+
+svg {
+    width: 15%;
+    transition: width 2s, height 2s, transform 2s;
+}
+
+svg:hover {
+    width: 200px;
+    height: 200px;
+    transform: rotate(180deg);
+    animation: logoAnimation 2s ease-in-out;
+}
+
+@keyframes logoAnimation {
+    0% {
+        transform: rotate(0deg);
+    }
+    50% {
+        transform: rotate(90deg);
+    }
+    100% {
+        transform: rotate(180deg);
+    }
+}
+
+.stuff {
+    margin-left: 20px;
+}
+
+.articles {
+    margin-top: 30px;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: rgba(0, 0, 0, 0.5);
+    color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    z-index: 1;
+    margin: 20px;
+    display: flex;
+}
+img{
+    height: 238px;
+    margin-right: 8px;
+}
+
+img:hover{
+    filter: blur(5px);
+}
+
+.button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #007BFF;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    
+}
+
+.footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: #61CAC0;
+    color: white;
+    text-align: center;
+}
+
+.main-menu ul,
+.main-menu .submenu {
+    list-style-type: none; /* Removes bullet points */
+    margin: 0;
+    padding: 0;
+}
+
+/* Main menu list items */
+.main-menu > ul > li {
+    position: relative;
+    display: inline-block; /* Display menu items inline */
+    margin-right: 10px;
+}
+
+.main-menu a {
+    text-decoration: none;
+    padding: 10px;
+    display: block;
+}
+
+/* Hide submenu */
+.submenu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    z-index: 1000;
+}
+
+/* Show submenu on hover */
+.dropdown:hover .submenu {
+    display: flex; /* Use flexbox to align items horizontally */
+    flex-direction: row; /* Align flex items in a row */
+}
+
+/* Submenu items */
+.submenu > li {
+    display: inline-block; /* Display submenu items inline */
+    background-color: #f9f9f9;
+    border-bottom: none; /* Remove border bottom */
+}
+
+.submenu > li:hover {
+    background-color: #f1f1f1;
+}
+
+.submenu a {
+    padding: 10px;
+    color: #333;
+    display: block; /* Keep links as block for padding and easy clicking */
+    text-decoration: none;
+}
+
+/* Additional styles to remove spacing and align submenu with the top menu if necessary */
+.main-menu > ul > li.dropdown {
+    vertical-align: top; /* Align dropdown menu items with the top of the line */
+}
+
+.submenu {
+    padding-left: 0; /* Remove padding if present */
+}
+
+@media only screen and (max-width: 768px) {
+    .header {
+        text-align: center;
+    }
+
+    svg {
+        width: 80%;
+        max-width: 200px;
+    }
+
+    .main-menu {
+        float: none;
+        text-align: center;
+    }
+
+    li {
+        float: none;
+        display: block;
+        text-align: center;
+        margin: 5px 0;
+    }
+
+    .submenu {
+        position: static;
+        display: none;
+        width: 100%;
+    }
+
+    .main-menu ul li.title {
+        display: none;
+    }
+
+    .articles {
+        position: static;
+        transform: none;
+        margin: 20px 0;
+        width: 238px;
+    }
+    .article {
+        position: relative;
+        width: 90%;
+        
+    }
+
+    img {
+        height: auto;
+        max-width: 90%;
+        margin-right: 0;
+    }
+
+    .button {
+        display: block;
+        margin-top: 10px;
+    }
+
+    .footer {
+        display: none;
+    }
+    body {
+        overflow: auto;
+    }
+    video {
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        min-width: 100%;
+        min-height: 100%;
+        width: auto;
+        height: auto;
+        transform: translate(-50%, -50%);
+        z-index: -1; 
+        
+    }
+}
